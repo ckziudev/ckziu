@@ -25,13 +25,26 @@
 
         //akcja po kliknieciu przycisku
         przycisk.addEventListener('click', function(){
-                
-                        //
-                        if(){
-    
-                            
+
+                        if(zarowka.src.includes('zarowka_off.png')){
+                                
+                            zarowka.src = 'zarowka_on.png';
+
+                           // przycisk.classList.remove('btn-success');
+                            //przycisk.classList.add('btn-danger');
+
+                            przycisk.className = 'btn  btn-danger'
+                            przycisk.innerText = 'OFF'
+
                         }else{
-        
+
+                            zarowka.src = 'zarowka_off.png';
+
+                            //przycisk.classList.remove('btn-danger');
+                            //przycisk.classList.add('btn-success');
+
+                            przycisk.className = 'btn btn-success'
+                            przycisk.innerText = 'ON'
                         }
             })
 

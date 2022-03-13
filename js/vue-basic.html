@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+        <!-- VUE JS -->
+        <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div class="container text-center mt-4" id="app">
+
+                <div :class="{'text-success': fullname.length > 20}">{{komunikat}} {{fullname}}</div>
+                <input type="text" class="form-control" v-model="komunikat">
+                <br>
+                <input type="text" class="form-control" v-model="imie">
+                <input type="text" class="form-control" v-model="nazwisko">
+<br>
+                <div v-if="magiaIstnieje">MAGIA</div>
+                <button @click="magiaIstnieje = !magiaIstnieje">ZMIEN</button>
+<br>
+                <button class="tn btn-success" @click="showAlert()"> KLIK </button>
+    </div>
+
+    <script>
+        const app = {
+            data(){
+                return {
+                    komunikat: "witaj",
+                    imie: "",
+                    nazwisko: "",
+                    magiaIstnieje: true
+                    
+                }
+            },
+            methods: {
+                showAlert(){
+                        alert('kliknieto przycisk!');
+                }
+            },
+            computed: {
+                fullname(){
+                    return this.imie + " " + this.nazwisko
+                }
+            }
+        }
+    
+        Vue.createApp(app).mount('#app')
+        </script>
+</body>
+</html>

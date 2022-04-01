@@ -47,20 +47,6 @@
 
 
 
-
-
-
-
-
-
-
-<!-- <a href="" onclick="return confirm('Are you sure?')">testowy link</a> -->
-
-
-
-
-
-
 <!-- <i class="bi-alarm"></i> -->
 
 <?php

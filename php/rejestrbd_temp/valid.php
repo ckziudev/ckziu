@@ -6,14 +6,6 @@ $errorNazwisko = "";
 $errorEmail = "";
 
 
-//ustawienie zmiennych dla value inputów
-$imie="";
-$nazwisko="";
-$email="";
-
-//ścieka do pliku z rejestrem
-const PLIK = 'rejestr.txt';
-
 
 
 

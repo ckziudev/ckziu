@@ -6,19 +6,6 @@ $errorNazwisko = "";
 $errorEmail = "";
 
 
-//ustawienie zmiennych dla value inputów
-$imie="";
-$nazwisko="";
-$email="";
-
-//ścieka do pliku z rejestrem
-const PLIK = 'rejestr.txt';
-
-
-
-
-//dd($_POST);
-
 if( isset( $_POST['wyslano'] ) ){
 
     //przypisanie danych z formularza do zmiennych (atrybutów value inputów)
@@ -52,7 +39,15 @@ if( isset( $_POST['wyslano'] ) ){
     // kiedy brak errorów w formularzu...
     if( empty( $errorImie ) && empty( $errorNazwisko ) && empty( $errorEmail )){
        
-        require_once('zapis.php');
+        //sprawdzamy czy istnieje zmienna $id świadcząca o tym ze przetwarzany jest plik edit.php
+        if( isset( $id ) ){
+            //jeśli jest to edycja
+            require_once('aktualizacja.php');
+        }else{
+            //jeśli jest to rejestracja
+            require_once('zapis.php');
+        }
+        
 
     }
 }

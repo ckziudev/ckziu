@@ -41,7 +41,21 @@
     </div>
 </div>
 
-<button class="btn btn-success mt-2" name="wyslano">DODAJ DO REJESTRU</button>
+<?php
+if( isset( $id ) ){
+?>
+
+    <button class="btn btn-primary mt-2" name="wyslano">ZAPISZ ZMIANY</button>
+
+<?php
+}else{
+?>
+
+    <button class="btn btn-success mt-2" name="wyslano">DODAJ DO REJESTRU</button>
+    
+<?php
+}
+?>
 </form>
 
 

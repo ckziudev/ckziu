@@ -20,6 +20,13 @@
     <div class="container col-6">
         <h3 class="mt-3">Rejestr ludności  </h3>
 
+        <?php
+        //ustawienie zmiennych dla value inputów
+        $imie="";
+        $nazwisko="";
+        $email="";
+        ?>
+        
         <!-- Walidacja danych -->
         <?php require_once('valid.php'); ?>
         <!-- Formularz html -->
